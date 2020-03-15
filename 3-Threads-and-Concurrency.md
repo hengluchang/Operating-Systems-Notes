@@ -13,11 +13,23 @@
 
 ![processvthread](images/processvthread.png)
 
+Thread
+* can share virtual address space
+* usually results in hotter cache when multiple exists (due to sharing of address space)
+
+Process
+* takes longer to context switch
+
+Both process and thread have
+* execution context - the actual run time data necessary to run the process and keep
+track of its states (e.g., the user running the process, process priority, allocated
+memory ...etc. )
+
 ## Why are threads useful?
 
 * Parallelization => Speedup
 * Specialization => Hot cache
-* Efficiency => lower memory requirement & cheaper IPC
+* Efficiency => lower memory requirement & cheaper IPC (Different threads in one process share one address space whereas multiprocess application will need one address space assigned for each process)
 * Time for context switch in threads is less, since memory is shared, hence mapping is not required between virtual and physical memory.
 	- Therefore multithreading can be used to hide latency.
 * Benefits to both applicatioons and OS code 
