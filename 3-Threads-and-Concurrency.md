@@ -46,18 +46,19 @@ memory ...etc. )
 
 ## Concurrency control and Coordination
 
-- Mutual exclusion 
+- **Mut**ual **ex**clusion
 	- Exclusive access to only one thread at a time
     - **mutex**
 - Waiting on other threads
 	- Specific condition before proceeding
     - **condition variable**
-- Waking up other threads from wait state
+- Mutex and waiting on other threads are called synchronization mechanism.
+- Waking up other threads from wait state. 
 
 ## Threads and Threads creation 
 
 - Thread data structure: 
-	- Thread type, Thread ID, PC, SP, registers, stack, attributes.
+	- Thread type, Thread ID, PC(Program Counter), SP(Stack Pointer), registers, stack, attributes.
 
 - **Fork**(proc, args)
 	- create a thread
